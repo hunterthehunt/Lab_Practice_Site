@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Trading Floor - Waxxed on Waxx</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="logo-wrapper">
+        <div class="logo-placeholder"><span>[ Waxxed on Waxx Logo Placeholder ]</span></div>
+    </div>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & History</a></li>
+            <li><a href="trading.html" class="active">Community Trading</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="trading-hub">
+            <h2>Member Trade Floor</h2>
+            <p class="subtitle">Post records from your collection or offer an exchange proposal to other active subscribers.</p>
+
+            <div class="post-trade-box">
+                <h3>Post a Record for Trade</h3>
+                <form id="tradeForm" class="inline-form">
+                    <input type="text" id="tradeAlbum" placeholder="Album Title" required>
+                    <input type="text" id="tradeArtist" placeholder="Artist name" required>
+                    <select id="tradeCondition">
+                        <option value="Mint">Mint (M)</option>
+                        <option value="Near Mint">Near Mint (NM)</option>
+                        <option value="Very Good">Very Good (VG+)</option>
+                    </select>
+                    <button type="submit" class="post-btn">Publish Listing</button>
+                </form>
+            </div>
+
+            <h3>Active Trade Feed</h3>
+            <div class="trade-board-grid" id="tradeBoard">
+                <div class="trade-card">
+                    <div class="vinyl-disc-icon">💿</div>
+                    <h4>What's Going On</h4>
+                    <p class="artist">Marvin Gaye</p>
+                    <div class="trade-meta">
+                        <span>Condition: <strong>Near Mint</strong></span>
+                        <span>User: @SoulSpinner</span>
+                    </div>
+                    <button class="offer-btn" onclick="alert('Offer form initiated for Marvin Gaye!')">Make Trade Offer</button>
+                </div>
+
+                <div class="trade-card">
+                    <div class="vinyl-disc-icon">💿</div>
+                    <h4>The Dark Side of the Moon</h4>
+                    <p class="artist">Pink Floyd</p>
+                    <div class="trade-meta">
+                        <span>Condition: <strong>Mint (1973 Press)</strong></span>
+                        <span>User: @ProgRockGuy</span>
+                    </div>
+                    <button class="offer-btn" onclick="alert('Offer form initiated for Pink Floyd!')">Make Trade Offer</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

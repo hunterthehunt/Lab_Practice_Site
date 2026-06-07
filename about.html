@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & History - Waxxed on Waxx</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="logo-wrapper">
+        <div class="logo-placeholder"><span>[ Waxxed on Waxx Logo Placeholder ]</span></div>
+    </div>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About & History</a></li>
+            <li><a href="trading.html">Community Trading</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container page-layout">
+        <section class="about-content">
+            <h2>Our Story</h2>
+            <p>Founded by audiophiles for audiophiles, Waxxed on Waxx is more than just a retail store. We are a collection of music lovers dedicated to preserving the rich, warm heritage of analog sound processing.</p>
+            
+            <div class="history-block">
+                <h3>Our Club History</h3>
+                <p>What started in 2024 as a small gathering of four collectors swapping classic pressings in a basement garage quickly turned into an obsession. We realized that local collectors lacked a community space to safely share, verify, and trade records without steep marketplace processing fees.</p>
+                <p>By late 2025, our circle grew to over two hundred local collectors, sparking the official formation of the Waxxed on Waxx curated membership box service and interactive digital trading hub.</p>
+            </div>
+        </section>
+
+        <section class="form-container">
+            <h3>Join the Vinyl Club</h3>
+            <form id="clubForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress">Email Address:</label>
+                    <input type="email" id="emailAddress" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="musicGenre">Favorite Music Genre:</label>
+                    <select id="musicGenre">
+                        <option value="jazz">Jazz / Blues</option>
+                        <option value="rock">Classic / Indie Rock</option>
+                        <option value="hiphop">Hip-Hop / R&B</option>
+                        <option value="funk">Funk / Soul</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Submit Information</button>
+            </form>
+            <div id="formFeedback" class="hidden-feedback"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

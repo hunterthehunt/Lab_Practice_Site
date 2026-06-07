@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Waxxed on Waxx</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="logo-wrapper">
+        <div class="logo-placeholder"><span>[ Waxxed on Waxx Logo Placeholder ]</span></div>
+    </div>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About & History</a></li>
+            <li><a href="trading.html">Community Trading</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="contact-layout">
+            <h2>Connect with the Crew</h2>
+            <p class="subtitle">Have questions about registration, billing, or shipping schedules? Reach out directly!</p>
+
+            <div class="contact-grid">
+                <div class="contact-card info-card">
+                    <h3>Our Future Headquarters</h3>
+                    <p class="address-placeholder">
+                        📍 123 Vinyl Way<br>
+                        Suite 400<br>
+                        Atlanta / Sandy Springs area, GA 30328
+                    </p>
+                    <p class="contact-details">
+                        📧 support@waxxedonwaxx.example.com<br>
+                        📞 (555) 867-5309
+                    </p>
+                    
+                    <div class="social-block">
+                        <h4>Follow Our Spinned Content</h4>
+                        <div class="social-buttons-row">
+                            <a href="https://facebook.com" target="_blank" class="social-btn fb-btn">Find Us on Facebook</a>
+                            <a href="https://instagram.com" target="_blank" class="social-btn ig-btn">Find Us on Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card text-card">
+                    <h3>Send a Direct Message</h3>
+                    <form onsubmit="event.preventDefault(); alert('Message successfully logged! Our staff will reply within 24 tracking business hours.'); this.reset();">
+                        <div class="form-group">
+                            <label>Email Address:</label>
+                            <input type="email" required placeholder="yourname@domain.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Message Content:</label>
+                            <textarea rows="5" required placeholder="Write your message details here..." style="width:100%; padding:10px; border-radius:4px; border:1px solid #ccc;"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Secure Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
