@@ -30,7 +30,7 @@ body {
 }
 
 /* ==========================================
-   NEW: TOP CENTRAL LOGO AREA
+   TOP CENTRAL LOGO AREA
    ========================================== */
 .logo-wrapper {
     background-color: var(--dark-bg);
@@ -135,7 +135,7 @@ body {
 .essential-tag { background-color: var(--accent-red); }
 
 /* ==========================================
-   NEW: AUTOMATIC SCROLLING IMAGE GALLERY
+   AUTOMATIC SCROLLING IMAGE GALLERY
    ========================================== */
 .gallery-section {
     margin: 50px 0;
@@ -181,7 +181,7 @@ body {
 .gallery-item p { font-size: 0.85rem; font-weight: 600; color: #555; }
 
 /* ==========================================
-   NEW: INTERACTIVE ACCORDION FAQ STYLES
+   INTERACTIVE ACCORDION FAQ STYLES
    ========================================== */
 .faq-section {
     margin: 50px 0;
@@ -220,13 +220,11 @@ body {
     color: var(--primary-green);
 }
 
-/* Base state for sliding containers: collapsed out of sight */
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out; /* Controls slide acceleration */
+    transition: max-height 0.3s ease-out;
     background: #fafafa;
-    border-top: 0 solid #eee;
 }
 
 .faq-answer p {
@@ -236,7 +234,7 @@ body {
 }
 
 /* ==========================================
-   NEW: COMMUNITY TRADING STRUCTURES
+   COMMUNITY TRADING STRUCTURES
    ========================================== */
 .post-trade-box {
     background: white;
@@ -312,7 +310,7 @@ body {
 }
 
 /* ==========================================
-   NEW: CONTACT & PLACEHOLDER ADDRESS ELEMENTS
+   CONTACT & PLACEHOLDER ADDRESS ELEMENTS
    ========================================== */
 .contact-grid {
     display: grid;
@@ -391,3 +389,104 @@ body {
 .main-footer .social-links { display: flex; justify-content: center; gap: 20px; margin-top: 10px; }
 .social-icon { color: white; text-decoration: none; font-size: 0.9rem; border: 1px solid white; padding: 3px 12px; border-radius: 20px; }
 .social-icon:hover { color: var(--hover-yellow); border-color: var(--hover-yellow); }
+
+/* ==========================================
+   GATEWAY PORTAL & AUTHENTICATION STYLES
+   ========================================== */
+.gateway-body {
+    background-color: #111111; /* Sleek deep dark backing purely for access screen */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.gateway-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-card {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 35px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid var(--primary-green);
+}
+
+.auth-card h2 {
+    font-size: 1.6rem;
+    color: var(--dark-bg);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.auth-subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.radio-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.checkbox-group {
+    margin: 15px 0 20px 0;
+}
+
+.checkbox-label {
+    font-size: 0.9rem;
+    color: #444;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.switch-auth-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.switch-auth-text a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-auth-text a:hover { text-decoration: underline; }
+.hidden-auth { display: none !important; }
+
+.logout-link {
+    color: var(--accent-red) !important;
+    border: 1px solid rgba(192, 57, 43, 0.4);
+    border-radius: 4px;
+}
+
+.logout-link:hover {
+    background-color: var(--accent-red);
+    color: white !important;
+}

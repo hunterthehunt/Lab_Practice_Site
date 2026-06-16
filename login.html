@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gateway - Waxxed on Waxx</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gateway-body">
+
+    <div class="logo-wrapper">
+        <div class="logo-placeholder">
+            <span>[ Waxxed on Waxx Logo Placeholder ]</span>
+        </div>
+    </div>
+
+    <main class="gateway-container">
+        <div class="auth-card">
+            
+            <div id="loginSection">
+                <h2>Club Access Portal</h2>
+                <p class="auth-subtitle">Please sign in to access the community hub.</p>
+                
+                <form id="loginForm" method="POST">
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="accessType" value="member" checked> Active Member
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="accessType" value="guest"> Guest Visitor
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginUser">Login Name / Email:</label>
+                        <input type="text" id="loginUser" required placeholder="Enter username">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPass">Password:</label>
+                        <input type="password" id="loginPass" required placeholder="••••••••">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe"> Save my login name in the login field
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Enter Hub</button>
+                </form>
+                <p class="switch-auth-text">New to the club? <a href="#" id="showSignup">Create an account here</a></p>
+            </div>
+
+            <div id="signupSection" class="hidden-auth">
+                <h2>Create Your Membership Account</h2>
+                <p class="auth-subtitle">Join our small close-knit vinyl community today.</p>
+                
+                <form id="registrationForm" method="POST">
+                    <div class="form-group">
+                        <label for="regName">Full Name:</label>
+                        <input type="text" id="regName" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email Address:</label>
+                        <input type="email" id="regEmail" required placeholder="name@domain.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="regPass">Create Secret Password:</label>
+                        <input type="password" id="regPass" required placeholder="Minimum 8 characters">
+                    </div>
+                    <button type="submit" class="submit-btn registration-btn">Complete Registration</button>
+                </form>
+                <p class="switch-auth-text">Already registered? <a href="#" id="showLogin">Back to login portal</a></p>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

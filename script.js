@@ -2,38 +2,34 @@
 // FEATURE 1: VINYL OF THE WEEK POP-UP NOTIFICATION
 // =========================================================================
 function showAlbumDetails(albumName, artistName) {
-    alert("自动 Waxxed on Waxx Spotlight: '" + albumName + "' by " + artistName + ".\nAvailable in shop tracking stock profiles!");
+    alert("💿 Waxxed on Waxx Spotlight: '" + albumName + "' by " + artistName + ".\nAvailable in shop tracking stock profiles!");
 }
 
-// =========================================================================
-// NEW FEATURE 2: AUTOMATIC INFINITE MARQUEE GALLERY LOOP
-// =========================================================================
 document.addEventListener("DOMContentLoaded", function() {
+    
+    // =========================================================================
+    // FEATURE 2: AUTOMATIC INFINITE MARQUEE GALLERY LOOP
+    // =========================================================================
     const galleryContainer = document.getElementById("galleryContainer");
     
     if (galleryContainer) {
-        let scrollSpeed = 1; // Pixels skipped per frame update block
-        
-        // Clone the content immediately to ensure a seamless wrap-around loop effect
+        let scrollPosition = 0;
         const innerContent = galleryContainer.innerHTML;
-        galleryContainer.innerHTML += innerContent;
+        galleryContainer.innerHTML += innerContent; // Double the items for seamless loop
 
         function scrollMarquee() {
-            galleryContainer.style.transform = `translateX(-${scrollSpeed}px)`;
-            scrollSpeed += 0.5; // Controls tracking slide velocity
-
-            // Reset loop position if it scrolls past the original width threshold
-            if (scrollSpeed >= galleryContainer.scrollWidth / 2) {
-                scrollSpeed = 0;
+            scrollPosition += 0.5; // Smooth incremental step speed
+            if (scrollPosition >= galleryContainer.scrollWidth / 2) {
+                scrollPosition = 0;
             }
+            galleryContainer.style.transform = `translateX(-${scrollPosition}px)`;
             requestAnimationFrame(scrollMarquee);
         }
-        // Start infinite animation logic loop execution
         requestAnimationFrame(scrollMarquee);
     }
 
     // =========================================================================
-    // NEW FEATURE 3: INTERACTIVE SLIDING ACCORDION FAQ LOGIC
+    // FEATURE 3: INTERACTIVE SLIDING ACCORDION FAQ LOGIC
     // =========================================================================
     const faqQuestions = document.querySelectorAll(".faq-question");
 
@@ -42,12 +38,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const currentAnswer = this.nextElementSibling;
             const isOpen = currentAnswer.style.maxHeight && currentAnswer.style.maxHeight !== "0px";
 
-            // STEP A: Force collapse on ALL active questions across the wrapper
+            // Collapse all answers first
             document.querySelectorAll(".faq-answer").forEach(answer => {
                 answer.style.maxHeight = "0px";
             });
 
-            // STEP B: If the item clicked wasn't already open, expand it using scrollHeight boundaries
+            // Expand clicked answer if it wasn't already open
             if (!isOpen) {
                 currentAnswer.style.maxHeight = currentAnswer.scrollHeight + "px";
             }
@@ -55,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // =========================================================================
-    // NEW FEATURE 4: DYNAMIC LIVE MEMBER BOARD TRADE POSTING
+    // FEATURE 4: DYNAMIC LIVE MEMBER BOARD TRADE POSTING
     // =========================================================================
     const tradeForm = document.getElementById("tradeForm");
     const tradeBoard = document.getElementById("tradeBoard");
@@ -68,10 +64,9 @@ document.addEventListener("DOMContentLoaded", function() {
             const artistName = document.getElementById("tradeArtist").value;
             const condition = document.getElementById("tradeCondition").value;
 
-            // Build fresh card markup block natively
             const newCard = document.createElement("div");
             newCard.className = "trade-card";
-            newCard.style.borderLeft = "4px solid #2e6f40"; // Use theme green for newly injected user listings
+            newCard.style.borderLeft = "4px solid var(--primary-green)";
             
             newCard.innerHTML = `
                 <div class="vinyl-disc-icon">💿</div>
@@ -81,17 +76,16 @@ document.addEventListener("DOMContentLoaded", function() {
                     <span>Condition: <strong>${condition}</strong></span>
                     <span>User: <strong>@You (Active Member)</strong></span>
                 </div>
-                <button class="offer-btn" style="border-color: #2e6f40; color: #2e6f40;" onclick="alert('You cannot trade with your own listing!')">Manage Listing</button>
+                <button class="offer-btn" style="border-color: var(--primary-green); color: var(--primary-green);" onclick="alert('You cannot trade with your own listing!')">Manage Listing</button>
             `;
 
-            // Insert new listing card right at the top of the feed
             tradeBoard.insertBefore(newCard, tradeBoard.firstChild);
             tradeForm.reset();
         });
     }
 
     // =========================================================================
-    // FEATURE 5: SIGN-UP FORM FEEDBACK
+    // FEATURE 5: SIGN-UP FORM FEEDBACK (About Page)
     // =========================================================================
     const clubForm = document.getElementById("clubForm");
     const feedbackArea = document.getElementById("formFeedback");
@@ -107,6 +101,79 @@ document.addEventListener("DOMContentLoaded", function() {
             feedbackArea.style.backgroundColor = "#e8f5e9"; 
             feedbackArea.style.color = "#2e6f40";           
             clubForm.reset();
+        });
+    }
+
+    // =========================================================================
+    // FEATURE 6: GATEWAY MANAGEMENT (LOGIN, SIGNUP, AND PERSISTENCE)
+    // =========================================================================
+    const loginSection = document.getElementById("loginSection");
+    const signupSection = document.getElementById("signupSection");
+    const showSignupLink = document.getElementById("showSignup");
+    const showLoginLink = document.getElementById("showLogin");
+    
+    const loginForm = document.getElementById("loginForm");
+    const registrationForm = document.getElementById("registrationForm");
+    const loginUserInput = document.getElementById("loginUser");
+    const rememberMeCheckbox = document.getElementById("rememberMe");
+
+    // Check for preserved user name
+    if (loginUserInput) {
+        const savedName = localStorage.getItem("waxxedSavedUsername");
+        if (savedName) {
+            loginUserInput.value = savedName;
+            rememberMeCheckbox.checked = true;
+        }
+    }
+
+    // Toggle forms
+    if (showSignupLink && showLoginLink) {
+        showSignupLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            loginSection.classList.add("hidden-auth");
+            signupSection.classList.remove("hidden-auth");
+        });
+
+        showLoginLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            signupSection.classList.add("hidden-auth");
+            loginSection.classList.remove("hidden-auth");
+        });
+    }
+
+    // Submit Login
+    if (loginForm) {
+        loginForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const username = loginUserInput.value;
+            const accessSelection = document.querySelector('input[name="accessType"]:checked').value;
+
+            if (rememberMeCheckbox.checked) {
+                localStorage.setItem("waxxedSavedUsername", username);
+            } else {
+                localStorage.removeItem("waxxedSavedUsername");
+            }
+
+            alert(`Access Granted! Entering Waxxed on Waxx Hub as a registered ${accessSelection.toUpperCase()}.`);
+            window.location.href = "index.html";
+        });
+    }
+
+    // Submit Registration Form
+    if (registrationForm) {
+        registrationForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            const registrantName = document.getElementById("regName").value;
+            alert(`Account successfully provisioned for ${registrantName}! Returning to portal login.`);
+            
+            signupSection.classList.add("hidden-auth");
+            loginSection.classList.remove("hidden-auth");
+            
+            if (loginUserInput) {
+                loginUserInput.value = document.getElementById("regEmail").value;
+            }
         });
     }
 });
