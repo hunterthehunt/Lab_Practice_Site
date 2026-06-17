@@ -3,122 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waxxed on Waxx - Record Club</title>
+    <title>Waxxed on Waxx | The Vinyl Lounge</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="logo-wrapper">
-        <div class="logo-placeholder">
-            <span>[ Waxxed on Waxx Logo Placeholder ]</span>
+    <header>
+        <div class="nav-brand">
+            <img src="images/Waxx_BG.jpg" alt="Waxxed on Waxx Logo" class="logo">
+            <h1>Waxxed on Waxx</h1>
         </div>
-    </div>
-
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About & History</a></li>
-            <li><a href="trading.html">Community Trading</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="login.html" class="logout-link">Logout</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero-section">
-        <h1>Welcome to the Club</h1>
-        <p>Your ultimate destination for exceptional sound and curated vinyl community.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About & History</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="merchandise.html">Merchandise</a></li>
+                <li><a href="booking.html">Artist Booking</a></li>
+                <li><a href="alerts.html">Join Club</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <section class="weekly-showcase">
-            <h2>Vinyls of the Week</h2>
-            <p class="subtitle">Our top curated picks for this week. Click to explore more details!</p>
-            
-            <div class="vinyl-grid">
-                <div class="vinyl-card" onclick="showAlbumDetails('Classic Jazz Grooves', 'Miles Davis')">
-                    <div class="album-art-placeholder">🎵</div>
-                    <h3>Classic Jazz Grooves</h3>
-                    <p>Miles Davis</p>
-                    <span class="tag weekly-tag">Featured</span>
-                </div>
-                <div class="vinyl-card" onclick="showAlbumDetails('Abbey Road', 'The Beatles')">
-                    <div class="album-art-placeholder">🎵</div>
-                    <h3>Abbey Road</h3>
-                    <p>The Beatles</p>
-                    <span class="tag limited-tag">Limited Edition</span>
-                </div>
-                <div class="vinyl-card" onclick="showAlbumDetails('Rumours', 'Fleetwood Mac')">
-                    <div class="album-art-placeholder">🎵</div>
-                    <h3>Rumours</h3>
-                    <p>Fleetwood Mac</p>
-                    <span class="tag essential-tag">Essential</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="gallery-section">
-            <h2>Member Spin Gallery</h2>
-            <p class="subtitle">Unboxings, custom setups, and room showings posted straight from our community.</p>
-            <div class="gallery-wrapper">
-                <div class="gallery-scroll-container" id="galleryContainer">
-                    <div class="gallery-item">
-                        <div class="img-box">📦</div>
-                        <p>@KevinsSpins - Unboxing June Box!</p>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="img-box">🎸</div>
-                        <p>@RockCollector - My Listening Room Setup</p>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="img-box">🔥</div>
-                        <p>@VinylVibe - Rare red vinyl print showcase</p>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="img-box">🎧</div>
-                        <p>@AnalogAud - Sunday setup spinning jazz</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="faq-section">
-            <h2>Frequently Asked Questions</h2>
-            <p class="subtitle">Everything you need to know about the Waxxed on Waxx operation.</p>
-            
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">What are the benefits of this vinyl club?</button>
-                    <div class="faq-answer">
-                        <p>Members receive a completely curated mystery vinyl box explicitly customized around their preferred music profiles every month, access to our community trading floor, and priority registration to local outdoor swap meets!</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">How often does this club have in-person events?</button>
-                    <div class="faq-answer">
-                        <p>We assemble twice a month! Our main monthly swap meet sits mid-month inside our lounge hub, and we spin open-air sessions tracking locations over select weekends.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">How does the community record trading floor function?</button>
-                    <div class="faq-answer">
-                        <p>Active subscribers can list albums from their personal collections they want to trade on our member dashboard. Other verified members can submit alternative trade offers directly to your queue!</p>
-                    </div>
-                </div>
+    <main>
+        <section style="text-align: center; padding: 4rem 1rem; background: radial-gradient(circle, #1a1a22 0%, var(--lounge-black) 70%); border-radius: 8px;">
+            <h2 style="border: none; font-size: 2.5rem; margin-bottom: 1rem;">WELCOME TO THE CRATE DIGGER'S SANCTUARY</h2>
+            <p style="font-size: 1.25rem; max-width: 750px; margin: 0 auto 2.5rem auto; color: var(--muted-text); font-family: sans-serif; font-weight: 300;">
+                Waxxed on Waxx is a dedicated group of music purists keeping analog culture alive. Step out of the digital noise and into the warm tracking of classic physical playback.
+            </p>
+            <div style="margin-bottom: 2rem;">
+                <img src="images/Waxx_BG.jpg" alt="Waxxed on Waxx Crest" style="max-width: 320px; width: 100%; border: 2px solid var(--brass-gold); box-shadow: 0px 10px 25px rgba(0,0,0,0.6);">
             </div>
         </section>
     </main>
 
-    <footer class="main-footer">
-        <p>&copy; 2026 Waxxed on Waxx. All Rights Reserved.</p>
-        <div class="social-links">
-            <a href="https://facebook.com" target="_blank" class="social-icon fb">Facebook</a>
-            <a href="https://instagram.com" target="_blank" class="social-icon ig">Instagram</a>
-        </div>
+    <footer>
+        <p>&copy; 2026 WAXXED ON WAXX VINYL LOUNGE. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>

@@ -3,64 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About & History - Waxxed on Waxx</title>
+    <title>Waxxed on Waxx | Our Story</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="logo-wrapper">
-        <div class="logo-placeholder"><span>[ Waxxed on Waxx Logo Placeholder ]</span></div>
-    </div>
+    <header>
+        <div class="nav-brand">
+            <img src="images/Waxx_NoBG.png" alt="Waxxed on Waxx Logo" class="logo">
+            <h1>Waxxed on Waxx</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About & History</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="merchandise.html">Merchandise</a></li>
+                <li><a href="booking.html">Artist Booking</a></li>
+                <li><a href="alerts.html">Join Club</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About & History</a></li>
-            <li><a href="trading.html">Community Trading</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="login.html" class="logout-link">Logout</a></li>
-        </ul>
-    </nav>
+    <main>
+        <div class="about-layout">
+            <section class="narrative">
+                <h2>Crate Digging History</h2>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">
+                    Waxxed on Waxx began in dark basements and smoky backrooms where small groups of collectors met to trade rare jazz pressings, soul breakbeats, and timeless analog audio recordings. We found that modern digital music lacked the warmth, history, and deliberate tracking that physical records deliver.
+                </p>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">
+                    What started as an informal neighborhood swap meet has evolved into an upscale private record club collective. Today, we bridge the gap between historic audio processing preservation and a modern peer-to-peer exchange platform for verified music collectors.
+                </p>
+                <div style="border-left: 3px solid var(--brass-gold); padding-left: 1.5rem; margin: 2.5rem 0; font-style: italic; color: var(--muted-text);">
+                    "Digital streams are fleeting convenience. True acoustic appreciation requires dropping the needle on historical heavy-weight wax."
+                </div>
+            </section>
 
-    <main class="container page-layout">
-        <section class="about-content">
-            <h2>Our Story</h2>
-            <p>Founded by audiophiles for audiophiles, Waxxed on Waxx is more than just a retail store. We are a collection of music lovers dedicated to preserving the rich, warm heritage of analog sound processing.</p>
-            
-            <div class="history-block">
-                <h3>Our Club History</h3>
-                <p>What started in 2024 as a small gathering of four collectors swapping classic pressings in a basement garage quickly turned into an obsession. We realized that local collectors lacked a community space to safely share, verify, and trade records without steep marketplace processing fees.</p>
-                <p>By late 2025, our circle grew to over two hundred local collectors, sparking the official formation of the Waxxed on Waxx curated membership box service and interactive digital trading hub.</p>
-            </div>
-        </section>
-
-        <section class="form-container">
-            <h3>Join the Vinyl Club</h3>
-            <form id="clubForm">
-                <div class="form-group">
-                    <label for="fullName">Full Name:</label>
-                    <input type="text" id="fullName" required placeholder="John Doe">
-                </div>
-                <div class="form-group">
-                    <label for="emailAddress">Email Address:</label>
-                    <input type="email" id="emailAddress" required placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="musicGenre">Favorite Music Genre:</label>
-                    <select id="musicGenre">
-                        <option value="jazz">Jazz / Blues</option>
-                        <option value="rock">Classic / Indie Rock</option>
-                        <option value="hiphop">Hip-Hop / R&B</option>
-                        <option value="funk">Funk / Soul</option>
-                    </select>
-                </div>
-                <button type="submit" class="submit-btn">Submit Information</button>
-            </form>
-            <div id="formFeedback" class="hidden-feedback"></div>
-        </section>
+            <aside style="background-color: var(--card-bg); padding: 2rem; border-left: 4px solid var(--velvet-burgundy);">
+                <h3 style="color: var(--brass-gold); margin-bottom: 1rem; text-transform: uppercase;">Club Philosophy</h3>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 15px; font-family: sans-serif; font-size: 0.95rem;">
+                    <li><strong>• Pure Signal Tracking:</strong> We advocate for uncompressed, analog audio reproduction chain workflows.</li>
+                    <li><strong>• Cultural Preservation:</strong> Curating and protecting original mid-century press prints.</li>
+                    <li><strong>• Local Artist Incubator:</strong> Elevating modern instrumental talent onto live physical music sets.</li>
+                </ul>
+            </aside>
+        </div>
     </main>
 
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 WAXXED ON WAXX VINYL LOUNGE. ALL RIGHTS RESERVED.</p>
+    </footer>
+
 </body>
 </html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waxxed on Waxx | Subscriber Ledger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-brand">
+            <img src="images/Waxx_NoBG.png" alt="Waxxed on Waxx Logo" class="logo">
+            <h1>Waxxed on Waxx</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About & History</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="merchandise.html">Merchandise</a></li>
+                <li><a href="booking.html">Artist Booking</a></li>
+                <li><a href="alerts.html" class="active">Join Club</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="max-width: 650px;">
+        <h2>Join the Dispatch Network</h2>
+        <p style="color: var(--muted-text); margin-bottom: 2.5rem; font-family: sans-serif;">
+            Don't get cut out of the rotation loop. Registry subscribers receive primary tracking updates on limited merchandise drops, private lounge entry access keys, and scheduled trading floor announcements.
+        </p>
+
+        <div class="form-container">
+            <form action="#" method="POST" onsubmit="alert('Subscriber identity added to the Waxxed on Waxx courier log.'); return false;">
+                <div class="form-group">
+                    <label for="subscriber">Full Name *</label>
+                    <input type="text" id="subscriber" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Destination *</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label style="color: var(--brass-gold);">Select Dispatch Channels</label>
+                    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 0.75rem; font-family: sans-serif; font-size: 0.95rem;">
+                        <label style="display: flex; align-items: center; text-transform: none; font-weight: normal;">
+                            <input type="checkbox" checked style="width: auto; margin-right: 12px;"> Live Sessions & Show Announcements
+                        </label>
+                        <label style="display: flex; align-items: center; text-transform: none; font-weight: normal;">
+                            <input type="checkbox" style="width: auto; margin-right: 12px;"> Vinyl Merchandise & Apparel Alerts
+                        </label>
+                        <label style="display: flex; align-items: center; text-transform: none; font-weight: normal;">
+                            <input type="checkbox" style="width: auto; margin-right: 12px;"> Peer-to-Peer Trading Ledger Updates
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Register Identity</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WAXXED ON WAXX VINYL LOUNGE. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>

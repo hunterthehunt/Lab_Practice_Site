@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waxxed on Waxx | Performance Audition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-brand">
+            <img src="images/Waxx_NoBG.png" alt="Waxxed on Waxx Logo" class="logo">
+            <h1>Waxxed on Waxx</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About & History</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="merchandise.html">Merchandise</a></li>
+                <li><a href="booking.html" class="active">Artist Booking</a></li>
+                <li><a href="alerts.html">Join Club</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="max-width: 750px;">
+        <h2>Lounge Performance Auditions</h2>
+        <p style="color: var(--muted-text); margin-bottom: 2.5rem; font-family: sans-serif;">
+            Our venue curates live instrumental talent and set arrangements. If you wish to secure a set tracking date on our booking calendar, please route your technical application and performance video recordings down our screening channel.
+        </p>
+
+        <div class="form-container">
+            <form action="#" method="POST" enctype="multipart/form-data" onsubmit="alert('Application and performance data securely logged for team review.'); return false;">
+                <div class="form-group">
+                    <label for="artist">Artist Name / Group Handle *</label>
+                    <input type="text" id="artist" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="genre">Sound Stylings / Sub-Genre *</label>
+                    <input type="text" id="genre" placeholder="e.g., Hard Bop, Acid Jazz, Soul-Funk Breaks" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">Booking Contact Email *</label>
+                    <input type="email" id="contact" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Setup Requirements & Performance Notes</label>
+                    <textarea id="bio" rows="4" placeholder="Detail your instrument array, tracking needs, or turntablism equipment routing specifications..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="video-reel" style="color: var(--brass-gold);">Upload Performance Video Clip *</label>
+                    <input type="file" id="video-reel" accept="video/*" style="padding: 0.5rem; background-color: #000; border: 1px dashed var(--brass-gold);" required>
+                    <p style="font-size: 0.8rem; color: var(--muted-text); margin-top: 0.5rem; font-family: sans-serif;">Provide a raw audition video recording (.mp4, .mov) showcasing a live venue set performance.</p>
+                </div>
+
+                <button type="submit" class="btn">Submit Booking Application</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WAXXED ON WAXX VINYL LOUNGE. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>
