@@ -11,21 +11,40 @@
     <div class="login-wrapper">
         
         <div class="login-logo-container">
-            <img src="images/Waxx_NoBG.png" alt="Waxxed on Waxx Logo" class="login-logo">
+            <img src="images/Waxx_NoBG.png" alt="Waxxed on Waxx Logo" class="login-logo-clean">
         </div>
 
         <div class="login-container">
             <h2>Lounge Access</h2>
             
-            <form action="#" method="POST" onsubmit="alert('Authenticating membership credentials...'); return false;">
+            <form action="#" method="POST" onsubmit="alert('Processing log details...'); return false;">
+                
                 <div class="form-group">
-                    <label for="member-email">Email Address</label>
+                    <label>Membership Status</label>
+                    <div class="form-group-inline">
+                        <label class="inline-label">
+                            <input type="radio" name="guest-status" value="visitor" checked> First-Time Visitor
+                        </label>
+                        <label class="inline-label">
+                            <input type="radio" name="guest-status" value="returning"> Returning Guest
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="member-email">Email Address or Username</label>
                     <input type="email" id="member-email" name="member-email" placeholder="collector@waxxed.com" required>
                 </div>
 
                 <div class="form-group">
                     <label for="member-password">Passkey</label>
                     <input type="password" id="member-password" name="member-password" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label class="inline-label">
+                        <input type="checkbox" id="remember-user" name="remember-user"> Remember my username on this device
+                    </label>
                 </div>
 
                 <button type="submit" class="btn">Enter Lounge</button>
